@@ -1,7 +1,6 @@
 export interface VideoData {
   id: string;
   title: string;
-  thumbnailUrl: string;
   viewCount: number;
   memberNames: memberName[];
 }

@@ -7,7 +7,7 @@ import { memberName } from 'src/app/shared/domain/model';
   styleUrls: ['./video-item.component.scss'],
 })
 export class VideoItemComponent implements OnInit {
-  @Input() thumbnailUrl: string;
+  @Input() id: string;
   @Input() title: string;
   @Input() viewCount: number;
   @Input() memberNames: memberName[];

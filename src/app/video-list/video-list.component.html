@@ -1,10 +1,5 @@
 <mat-list>
   <a mat-list-item href="https://youtu.be/{{ item.id }}" class="video-list" [disableRipple]="false" *ngFor="let item of videoData">
-    <app-video-item
-      [thumbnailUrl]="item.thumbnailUrl"
-      [title]="item.title"
-      [viewCount]="item.viewCount"
-      [memberNames]="item.memberNames"
-    ></app-video-item>
+    <app-video-item [id]="item.id" [title]="item.title" [viewCount]="item.viewCount" [memberNames]="item.memberNames"></app-video-item>
   </a>
 </mat-list>
