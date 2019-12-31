@@ -1,5 +1,10 @@
 <mat-list>
   <mat-list-item class="video-list" *ngFor="let item of videoData">
-    <app-video-item></app-video-item>
+    <app-video-item
+      [thumbnailUrl]="item.thumbnailUrl"
+      [title]="item.title"
+      [viewCount]="item.viewCount"
+      [memberNames]="item.memberNames"
+    ></app-video-item>
   </mat-list-item>
 </mat-list>
