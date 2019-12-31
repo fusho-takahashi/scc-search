@@ -1,6 +1,12 @@
 :host {
+  width: 100%;
   box-sizing: border-box;
   padding: 8px 0;
+}
+
+a {
+  color: #fff;
+  display: block;
 }
 
 .video-info {

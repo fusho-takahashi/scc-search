@@ -1,4 +1,4 @@
-<div class="video-info">
+<a matRipple href="https://youtu.be/{{ id }}" class="video-info">
   <div class="thumbnail-area">
     <img src="https://i.ytimg.com/vi/{{ id }}/mqdefault.jpg" />
   </div>
@@ -6,7 +6,7 @@
     <div class="mat-body">{{ title }}</div>
     <div class="mat-caption opacity-60">{{ viewCount }} 回視聴</div>
   </div>
-</div>
+</a>
 <div class="member-info">
   <mat-chip-list>
     <mat-chip *ngFor="let name of memberNames">{{ name }}</mat-chip>
