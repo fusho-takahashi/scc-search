@@ -1,11 +1,15 @@
 <div class="sort-area">
-  <button mat-button color="accent" [matMenuTriggerFor]="menu">並べ替え</button>
+  <button mat-button color="accent" [matMenuTriggerFor]="menu">
+    <mat-icon class="sort-icon">sort</mat-icon>
+    並べ替え : {{ this.order }}
+    <mat-icon>arrow_drop_down</mat-icon>
+  </button>
 </div>
 <div>
-  <mat-menu #menu="matMenu">
+  <mat-menu #menu="matMenu" xPosition="before">
     <button mat-menu-item (click)="sortNewer()">新しい順</button>
     <button mat-menu-item (click)="sortOlder()">古い順</button>
-    <button mat-menu-item>再生数が多い順</button>
+    <button mat-menu-item (click)="sortViewCount()">再生数が多い順</button>
   </mat-menu>
   <mat-list class="video-list">
     <mat-list-item class="video-item" *ngFor="let item of videoData">
