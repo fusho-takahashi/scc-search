@@ -6,12 +6,13 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
+import { MatChipsModule } from '@angular/material/chips';
 import { VideoListComponent } from './video-list/video-list.component';
 import { VideoItemComponent } from './components/video-item/video-item.component';
 
 @NgModule({
   declarations: [AppComponent, VideoListComponent, VideoItemComponent],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, MatToolbarModule, MatListModule],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, MatToolbarModule, MatListModule, MatChipsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

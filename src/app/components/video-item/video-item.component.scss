@@ -1,0 +1,20 @@
+:host {
+  box-sizing: border-box;
+  padding: 8px 0;
+}
+
+.video-info {
+  display: grid;
+  grid-template-columns: 132px auto;
+}
+
+.thumbnail-area {
+}
+
+.thumbnail-area > img {
+  height: 64px;
+}
+
+.member-info {
+  margin-top: 4px;
+}
