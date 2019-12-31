@@ -16,9 +16,16 @@ a {
 
 $custom-typography: mat-typography-config(
   $font-family: '"Noto Sans JP"',
+  $subheading-2: mat-typography-level(17px, 30px, 400),
 );
 
 @include angular-material-typography($custom-typography);
+
+.mat-h3,
+.mat-subheading-2,
+.mat-typography h3 {
+  margin: 0;
+}
 
 .opacity-60 {
   opacity: 0.6;
@@ -58,4 +65,14 @@ app-root {
   left: 0;
   right: 0;
   max-width: 926px;
+}
+
+.filter-cancel {
+  font-size: 8px;
+
+  &.mat-stroked-button {
+    line-height: 20px;
+    padding: 0 8px;
+    margin-left: 8px;
+  }
 }

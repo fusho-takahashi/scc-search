@@ -12,6 +12,7 @@ type sortOrder = '新しい順' | '古い順' | '再生数が多い順';
 export class VideoListComponent {
   videoData: VideoData[] = [...VIDEO_DATA];
   order: sortOrder = '新しい順';
+  selectedMember: memberName | null = null;
 
   constructor() {}
 
@@ -60,6 +61,14 @@ export class VideoListComponent {
     });
 
     this.videoData = [...filterResult];
+    this.selectedMember = name;
     window.scrollTo(0, 0);
+    this.order = '新しい順';
+  }
+
+  cancelFilter() {
+    this.selectedMember = null;
+    this.videoData = [...VIDEO_DATA];
+    this.order = '新しい順';
   }
 }

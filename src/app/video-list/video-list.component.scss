@@ -1,10 +1,22 @@
-.sort-area {
-  margin-top: 8px;
-  padding: 0 16px;
+.filter-area {
+  background-color: #c2185b;
+  padding: 8px 0;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
 }
 
 .sort-icon {
   font-size: 20px;
+}
+
+.filter-member {
+  padding: 0 16px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+
+  &.no-filter {
+    display: none;
+  }
 }

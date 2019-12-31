@@ -1,25 +1,32 @@
-<div class="sort-area">
-  <button mat-button color="accent" [matMenuTriggerFor]="menu">
-    <mat-icon class="sort-icon">sort</mat-icon>
-    並べ替え : {{ this.order }}
-    <mat-icon>arrow_drop_down</mat-icon>
-  </button>
-</div>
-<div>
+<div class="filter-area">
+  <div class="filter-member" [class.no-filter]="!selectedMember">
+    <h3>{{ selectedMember }} の出演動画</h3>
+    <button mat-stroked-button color="accent" (click)="cancelFilter()" class="filter-cancel">
+      取り消す
+    </button>
+  </div>
+
+  <div class="sort-area">
+    <button mat-raised-button color="accent" [matMenuTriggerFor]="menu">
+      <mat-icon class="sort-icon">sort</mat-icon>
+      並べ替え : {{ this.order }}
+      <mat-icon>arrow_drop_down</mat-icon>
+    </button>
+  </div>
   <mat-menu #menu="matMenu" xPosition="before">
     <button mat-menu-item (click)="sortNewer()">新しい順</button>
     <button mat-menu-item (click)="sortOlder()">古い順</button>
     <button mat-menu-item (click)="sortViewCount()">再生数が多い順</button>
   </mat-menu>
-  <mat-list class="video-list">
-    <mat-list-item class="video-item" *ngFor="let item of videoData">
-      <app-video-item
-        [youtubeId]="item.youtubeId"
-        [title]="item.title"
-        [viewCount]="item.viewCount"
-        [memberNames]="item.memberNames"
-        (selectMember)="filterMember($event)"
-      ></app-video-item>
-    </mat-list-item>
-  </mat-list>
 </div>
+<mat-list class="video-list">
+  <mat-list-item class="video-item" *ngFor="let item of videoData">
+    <app-video-item
+      [youtubeId]="item.youtubeId"
+      [title]="item.title"
+      [viewCount]="item.viewCount"
+      [memberNames]="item.memberNames"
+      (selectMember)="filterMember($event)"
+    ></app-video-item>
+  </mat-list-item>
+</mat-list>
