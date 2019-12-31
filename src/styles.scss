@@ -24,13 +24,17 @@ $custom-typography: mat-typography-config(
   opacity: 0.6;
 }
 
+.video-list.mat-list-base {
+  padding-top: 0;
+}
+
 .mat-list-base {
-  .mat-list-item.video-list {
+  .mat-list-item.video-item {
     height: fit-content;
   }
 }
 
-.mat-list-base .mat-list-item.video-list .mat-list-item-content {
+.mat-list-base .mat-list-item.video-item .mat-list-item-content {
   align-items: flex-start;
 }
 
