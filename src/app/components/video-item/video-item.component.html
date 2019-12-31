@@ -9,7 +9,7 @@
 </a>
 <div class="member-info">
   <mat-chip-list>
-    <mat-chip *ngFor="let name of memberNames">{{ name }}</mat-chip>
+    <mat-chip (click)="this.selectMember.emit(name)" *ngFor="let name of memberNames">{{ name }}</mat-chip>
   </mat-chip-list>
 </div>
 <mat-divider></mat-divider>

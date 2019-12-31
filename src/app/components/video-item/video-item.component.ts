@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { memberName } from 'src/app/shared/domain/model';
 
 @Component({
@@ -11,6 +11,8 @@ export class VideoItemComponent implements OnInit {
   @Input() title: string;
   @Input() viewCount: number;
   @Input() memberNames: memberName[];
+
+  @Output() selectMember = new EventEmitter<memberName>();
   constructor() {}
 
   ngOnInit() {}

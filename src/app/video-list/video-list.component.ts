@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { VIDEO_DATA } from './VIDEO_DATA';
-import { VideoData } from '../shared/domain/model';
+import { VideoData, memberName } from '../shared/domain/model';
 
 type sortOrder = '新しい順' | '古い順' | '再生数が多い順';
 
@@ -52,5 +52,13 @@ export class VideoListComponent {
       return 0;
     });
     this.order = '再生数が多い順';
+  }
+
+  filterMember(name: memberName) {
+    const filterResult = this.videoData.filter((video: VideoData) => {
+      return video.memberNames.includes(name);
+    });
+
+    this.videoData = [...filterResult];
   }
 }

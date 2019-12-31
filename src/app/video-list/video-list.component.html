@@ -18,6 +18,7 @@
         [title]="item.title"
         [viewCount]="item.viewCount"
         [memberNames]="item.memberNames"
+        (selectMember)="filterMember($event)"
       ></app-video-item>
     </mat-list-item>
   </mat-list>
