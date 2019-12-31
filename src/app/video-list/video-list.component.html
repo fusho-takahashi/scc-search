@@ -3,13 +3,18 @@
 </div>
 <div>
   <mat-menu #menu="matMenu">
-    <button mat-menu-item>新しい順</button>
-    <button mat-menu-item>古い順</button>
+    <button mat-menu-item (click)="sortNewer()">新しい順</button>
+    <button mat-menu-item (click)="sortOlder()">古い順</button>
     <button mat-menu-item>再生数が多い順</button>
   </mat-menu>
   <mat-list class="video-list">
     <mat-list-item class="video-item" *ngFor="let item of videoData">
-      <app-video-item [id]="item.id" [title]="item.title" [viewCount]="item.viewCount" [memberNames]="item.memberNames"></app-video-item>
+      <app-video-item
+        [youtubeId]="item.youtubeId"
+        [title]="item.title"
+        [viewCount]="item.viewCount"
+        [memberNames]="item.memberNames"
+      ></app-video-item>
     </mat-list-item>
   </mat-list>
 </div>

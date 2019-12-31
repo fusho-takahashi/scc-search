@@ -1,5 +1,6 @@
 export interface VideoData {
-  id: string;
+  id: number;
+  youtubeId: string;
   title: string;
   viewCount: number;
   memberNames: memberName[];
