@@ -15,3 +15,38 @@ $custom-typography: mat-typography-config(
 );
 
 @include angular-material-typography($custom-typography);
+
+.opacity-60 {
+  opacity: 0.6;
+}
+
+.mat-list-base {
+  .mat-list-item.video-list {
+    height: fit-content;
+  }
+}
+
+.mat-list-base .mat-list-item.video-list .mat-list-item-content {
+  align-items: flex-start;
+}
+
+.member-info {
+  mat-chip {
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .mat-standard-chip {
+    min-height: 24px;
+    border-radius: 12px;
+  }
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 56px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
