@@ -55,10 +55,11 @@ export class VideoListComponent {
   }
 
   filterMember(name: memberName) {
-    const filterResult = this.videoData.filter((video: VideoData) => {
+    const filterResult = [...VIDEO_DATA].filter((video: VideoData) => {
       return video.memberNames.includes(name);
     });
 
     this.videoData = [...filterResult];
+    window.scrollTo(0, 0);
   }
 }
