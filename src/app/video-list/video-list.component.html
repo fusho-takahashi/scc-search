@@ -1,7 +1,7 @@
 <div class="filter-area">
   <div class="filter-member" [class.no-filter]="!selectedMember">
     <h3>{{ selectedMember }} の出演動画 {{ videoData.length }}件</h3>
-    <button mat-stroked-button color="accent" (click)="cancelFilter()" class="filter-cancel">
+    <button mat-flat-button color="accent" (click)="cancelFilter()" class="filter-cancel">
       取り消す
     </button>
   </div>
