@@ -1,7 +1,7 @@
 <div class="filter-area">
-  <div class="filter-member" [class.no-filter]="!selectedMember">
-    <h3>{{ selectedMember }} の出演動画 {{ videoData.length }}件</h3>
-    <button mat-flat-button color="accent" (click)="cancelFilter()" class="filter-cancel">
+  <div class="member-area" [class.no-filter]="!selectedMember">
+    <h3 [class.no-filter]="!selectedMember">{{ selectedMember }} の出演動画 {{ videoData.length }}件</h3>
+    <button mat-flat-button color="accent" (click)="cancelFilter()" class="filter-cancel" [class.no-filter]="!selectedMember">
       取り消す
     </button>
   </div>
@@ -13,12 +13,12 @@
       <mat-icon>arrow_drop_down</mat-icon>
     </button>
   </div>
-  <mat-menu #menu="matMenu" xPosition="before">
-    <button mat-menu-item (click)="sortNewer()">新しい順</button>
-    <button mat-menu-item (click)="sortOlder()">古い順</button>
-    <button mat-menu-item (click)="sortViewCount()">再生数が多い順</button>
-  </mat-menu>
 </div>
+<mat-menu #menu="matMenu" xPosition="before">
+  <button mat-menu-item (click)="sortNewer()">新しい順</button>
+  <button mat-menu-item (click)="sortOlder()">古い順</button>
+  <button mat-menu-item (click)="sortViewCount()">再生数が多い順</button>
+</mat-menu>
 <mat-list class="video-list">
   <mat-list-item class="video-item" *ngFor="let item of videoData">
     <app-video-item

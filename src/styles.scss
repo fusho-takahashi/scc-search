@@ -14,6 +14,34 @@ a {
   text-decoration: none;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+// header用設定
+app-root {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 56px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@media (min-width: 600px) {
+  app-root {
+    top: 64px;
+  }
+}
+
+.opacity-60 {
+  opacity: 0.6;
+}
+
+// For Angular Material
+
+// Fonts
 $custom-typography: mat-typography-config(
   $font-family: '"Noto Sans JP"',
   $subheading-2: mat-typography-level(17px, 30px, 400),
@@ -25,10 +53,6 @@ $custom-typography: mat-typography-config(
 .mat-subheading-2,
 .mat-typography h3 {
   margin: 0;
-}
-
-.opacity-60 {
-  opacity: 0.6;
 }
 
 .video-list.mat-list-base {
@@ -54,17 +78,6 @@ $custom-typography: mat-typography-config(
     min-height: 24px;
     border-radius: 12px;
   }
-}
-
-app-root {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 56px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  max-width: 926px;
 }
 
 .filter-cancel {

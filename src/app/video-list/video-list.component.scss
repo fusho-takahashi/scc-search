@@ -1,22 +1,61 @@
 .filter-area {
   background-color: #c2185b;
   padding: 8px 0;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: none;
+}
+
+@media (min-width: 600px) {
+  .filter-area {
+    height: 64px;
+    grid-template-rows: none;
+    grid-template-columns: auto auto;
+  }
+}
+
+.sort-area {
+  grid-column: 1;
+  grid-row: 2;
+  padding: 0 16px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+}
+
+@media (min-width: 600px) {
+  .sort-area {
+    grid-column: 2;
+    grid-row: 1;
+    justify-content: flex-end;
+  }
+}
+
+.member-area {
+  grid-column: 1;
+  grid-row: 1;
+  padding: 0 16px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.no-filter {
+    padding: 0;
+    height: 0;
+  }
+
+  & .no-filter {
+    display: none;
+  }
+}
+
+@media (min-width: 600px) {
+  .member-area {
+    justify-content: flex-start;
+  }
 }
 
 .sort-icon {
   font-size: 20px;
-}
-
-.filter-member {
-  padding: 0 16px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-
-  &.no-filter {
-    display: none;
-  }
 }
