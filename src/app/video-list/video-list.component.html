@@ -19,7 +19,7 @@
   <button mat-menu-item (click)="sortOlder()">古い順</button>
   <button mat-menu-item (click)="sortViewCount()">再生数が多い順</button>
 </mat-menu>
-<mat-list class="video-list">
+<mat-nav-list class="video-list">
   <mat-list-item class="video-item" *ngFor="let item of videoData">
     <app-video-item
       [youtubeId]="item.youtubeId"
@@ -29,4 +29,4 @@
       (selectMember)="filterMember($event)"
     ></app-video-item>
   </mat-list-item>
-</mat-list>
+</mat-nav-list>
