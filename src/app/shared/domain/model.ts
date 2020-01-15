@@ -30,5 +30,5 @@ export interface VideoInfo {
   tags: string[];
   title: string;
   videoId: string;
-  viewCount: string;
+  viewCount: number;
 }
