@@ -23,3 +23,12 @@ export type memberName =
   | '水越菜波'
   | '望月みらん'
   | '西野蓮';
+
+export interface VideoInfo {
+  members: memberName[];
+  publishedAt: Date;
+  tags: string[];
+  title: string;
+  videoId: string;
+  viewCount: string;
+}
